@@ -1,0 +1,18 @@
+@mixin main-label {
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.label {
+  @include main-label;
+  color: #000003;
+}
+
+.linked-label {
+  @include main-label;
+  color: blue;
+  &:hover {
+    text-decoration: underline;
+    color: red;
+  }
+}

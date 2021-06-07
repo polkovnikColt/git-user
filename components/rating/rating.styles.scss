@@ -1,0 +1,11 @@
+.rating-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.star {
+  &:hover{
+    fill: yellow;
+  }
+}
