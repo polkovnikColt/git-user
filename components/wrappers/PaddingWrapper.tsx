@@ -1,5 +1,10 @@
 import React from 'react';
 
-export const PaddingWrapper: React.FC = ({children}) => (
-  <div className="padding-wrapper">{children}</div>
-);
+type PaddingWrapperProps = {
+  className?: string;
+};
+
+export const PaddingWrapper: React.FC<PaddingWrapperProps> = ({
+  className,
+  children,
+}) => <div className={`padding-wrapper ${className}`}>{children}</div>;

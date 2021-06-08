@@ -1,6 +1,5 @@
 @mixin main-label {
-  font-size: .9rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .label {
@@ -12,7 +11,19 @@
   @include main-label;
   color: blue;
   &:hover {
-    text-decoration: underline;
     color: red;
+    text-decoration: underline;
   }
+}
+
+.small {
+  font-size: .9rem;
+}
+
+.medium {
+  font-size: 1.2rem;
+}
+
+.big {
+  font-size: 2rem;
 }

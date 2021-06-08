@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@apollo/client": "^3.3.19",
     "antd": "^4.16.1",
     "graphql": "^15.5.0",

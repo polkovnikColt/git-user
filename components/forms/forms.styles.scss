@@ -1,3 +1,20 @@
 .form-padding {
   padding: 10%;
 }
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ant-form-item-label {
+  label {
+    min-width: 90px!important;
+    height: inherit;
+  }
+}
+
+.ant-form-item {
+  max-width: 400px;
+}

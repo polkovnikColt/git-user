@@ -3,12 +3,20 @@ import Link from 'next/link';
 
 type LabelProps = {
   href?: string;
+  size: 'small' | 'medium' | 'big';
   text: string;
-  isLink: boolean;
+  className?: string;
+  isLink?: boolean;
 };
 
-export const Label: React.FC<LabelProps> = ({href, isLink, text}) => (
-  <span className={isLink ? 'linked-label' : 'label'}>
-    {isLink ? <Link href={href}>{text}</Link> : {text}}
+export const Label: React.FC<LabelProps> = ({
+  href,
+  isLink,
+  className,
+  text,
+  size,
+}) => (
+  <span className={`${size} ${isLink ? 'linked-label' : 'label'} ${className}`}>
+    {isLink ? <Link href={href}>{text}</Link> : text}
   </span>
 );

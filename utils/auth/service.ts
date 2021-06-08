@@ -1,4 +1,4 @@
-import {FormDataInterface} from '../../../../interfaces/interfaces';
+import {FormDataInterface} from '../../interfaces/interfaces';
 import {Input} from 'antd';
 
 export const authFormData: FormDataInterface[] = [

@@ -3,3 +3,37 @@
 @import "components/navbar/navbar.styles";
 @import "components/forms/forms.styles";
 @import "components/labels/labels.styles";
+@import "components/buttons/buttons.styles";
+@import "components/cards/card.styles";
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.mx-1 {
+  margin: 0 1%;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.p-1 {
+  padding: 1%;
+}
+
+.m-1 {
+  margin: 1%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.d-in-block {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,4 +1,4 @@
-import {Rating} from '../../rating/Rating';
+import {Followers} from '../../rating/Followers';
 import {Label} from '../../labels/Label';
 import React from 'react';
 
@@ -8,6 +8,7 @@ export const tableData = [
     name: '1',
     date: new Date().toLocaleDateString(),
     updated: new Date().getHours().toString().concat(' ago...'),
+    followers: 13,
     size: '2mb',
   },
   {
@@ -15,6 +16,7 @@ export const tableData = [
     name: '2',
     date: new Date().toLocaleDateString(),
     updated: new Date().getHours().toString().concat(' ago...'),
+    followers: 13,
     size: '2mb',
   },
   {
@@ -22,6 +24,7 @@ export const tableData = [
     name: '3',
     date: new Date().toLocaleDateString(),
     updated: new Date().getHours().toString().concat(' ago...'),
+    followers: 13,
     size: '2mb',
   },
   {
@@ -29,6 +32,7 @@ export const tableData = [
     name: '4',
     date: new Date().toLocaleDateString(),
     updated: new Date().getHours().toString().concat(' ago...'),
+    followers: 13,
     size: '2mb',
   },
   {
@@ -36,6 +40,7 @@ export const tableData = [
     name: '5',
     date: new Date().toLocaleDateString(),
     updated: new Date().getHours().toString().concat(' ago...'),
+    followers: 13,
     size: '2mb',
   },
   {
@@ -43,6 +48,7 @@ export const tableData = [
     name: '6',
     date: new Date().toLocaleDateString(),
     updated: new Date().getHours().toString().concat(' ago...'),
+    followers: 13,
     size: '2mb',
   },
 ];
@@ -52,27 +58,34 @@ export const columns = [
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
-    render: text => <Label text={text} href={`/repositories/${text}`} isLink />,
+    align: 'center',
+    render: text => (
+      <Label size="small" text={text} href={`/repositories/${text}`} isLink />
+    ),
   },
   {
     title: 'Date',
     dataIndex: 'date',
     key: 'date',
+    align: 'center',
   },
   {
     title: 'Updated',
     dataIndex: 'updated',
     key: 'updated',
+    align: 'center',
   },
   {
-    title: 'Rating',
-    dataIndex: '',
-    key: 'rating',
-    render: Rating,
+    title: 'Followers',
+    dataIndex: 'followers',
+    key: 'followers',
+    align: 'center',
+    render: followers => <Followers followersNumber={followers} />,
   },
   {
     title: 'Size',
     dataIndex: 'size',
     key: 'size',
+    align: 'center',
   },
 ];
