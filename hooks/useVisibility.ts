@@ -1,20 +1,17 @@
-import {MouseEvent as ME, useState} from 'react';
+import {useState} from 'react';
 
 export const useVisibility = (initState = false) => {
-  const [visible, setVisible] = useState<boolean>(initState);
+  const [visible, setVisible] = useState(initState);
 
-  const onShow = (e: ME<HTMLElement, MouseEvent>): void => {
-    e.stopPropagation();
+  const onShow = (): void => {
     setVisible(true);
   };
 
-  const onHide = (e: ME<HTMLElement, MouseEvent>): void => {
-    e.stopPropagation();
+  const onHide = (): void => {
     setVisible(false);
   };
 
-  const toggleVisibility = (e: ME<HTMLElement, MouseEvent>): void => {
-    e.stopPropagation();
+  const toggleVisibility = (): void => {
     setVisible(prev => !prev);
   };
 

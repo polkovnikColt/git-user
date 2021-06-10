@@ -1,4 +1,5 @@
-import {LinkInterface} from '../../../interfaces/interfaces';
+import React from 'react';
+import {LinkInterface} from '../../interfaces/interfaces';
 
 export const links: LinkInterface[] = [
   {

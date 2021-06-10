@@ -7,19 +7,19 @@ import {IconButton} from '../buttons/IconButton';
 type GeneralFormProps = {
   buttonText: string;
   formData: FormDataInterface[];
-  inputHandler: (name: string, value: string) => void;
-  submitHandler: () => void;
+  handleChange: (name: string, value: string) => void;
+  handleSubmit: () => void;
   hasCheckbox: boolean;
-  checkboxHandler?: () => void;
+  handleCheckbox?: () => void;
   checkboxLabel?: string;
 };
 
-export const GeneralForm: React.FC<GeneralFormProps> = ({
+export const Form: React.FC<GeneralFormProps> = ({
   buttonText,
   formData,
-  inputHandler,
-  submitHandler,
-  checkboxHandler,
+  handleChange,
+  handleSubmit,
+  handleCheckbox,
   hasCheckbox,
   checkboxLabel,
 }) => {
@@ -33,16 +33,19 @@ export const GeneralForm: React.FC<GeneralFormProps> = ({
             label={formItem.label}
             message={formItem.message}
             InputComponent={formItem.inputComponent}
-            changeHandler={inputHandler}
+            handleChange={handleChange}
           />
         ))}
         {hasCheckbox && (
-          <CheckboxItem handler={checkboxHandler} actionName={checkboxLabel} />
+          <CheckboxItem
+            handleCheckbox={handleCheckbox}
+            actionName={checkboxLabel}
+          />
         )}
       </div>
       <div className="d-in-block w-100">
         {buttonText && (
-          <IconButton className="m-auto" type="update" onClick={submitHandler}>
+          <IconButton className="m-auto" type="update" onClick={handleSubmit}>
             {buttonText}
           </IconButton>
         )}

@@ -7,4 +7,4 @@ type PaddingWrapperProps = {
 export const PaddingWrapper: React.FC<PaddingWrapperProps> = ({
   className,
   children,
-}) => <div className={`padding-wrapper ${className}`}>{children}</div>;
+}) => <div className={`padding-wrapper ${className || ''}`}>{children}</div>;

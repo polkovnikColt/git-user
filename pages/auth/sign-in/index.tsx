@@ -1,13 +1,13 @@
 import React from 'react';
 import {ContentWrapper} from '../../../components/wrappers/ContentWrapper';
-import {GeneralForm} from '../../../components/forms/GeneralForm';
+import {Form} from '../../../components/forms/Form';
 import {useFormHandler} from '../../../hooks/useFormHandler';
-import {authFormData} from '../../../utils/auth/service';
+import {authFormData} from '../../../utils/auth/authService';
 import {Label} from '../../../components/labels/Label';
 import {PaddingWrapper} from '../../../components/wrappers/PaddingWrapper';
 
 export default function AuthPage() {
-  const {object, changeHandler} = useFormHandler({});
+  const {formInput, handleChange} = useFormHandler({});
 
   return (
     <ContentWrapper>
@@ -16,12 +16,12 @@ export default function AuthPage() {
           <Label size="big" text="Welcome to git user application" />
         </div>
       </PaddingWrapper>
-      <GeneralForm
+      <Form
         hasCheckbox={false}
         formData={authFormData}
         submitHandler={() => {}}
         buttonText="Authenticate"
-        inputHandler={changeHandler}
+        inputHandler={handleChange}
       />
     </ContentWrapper>
   );

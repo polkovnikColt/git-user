@@ -7,6 +7,16 @@
   color: #000003;
 }
 
+.description {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.text {
+  font-size: .8rem;
+  font-weight: 400;
+}
+
 .linked-label {
   @include main-label;
   color: blue;

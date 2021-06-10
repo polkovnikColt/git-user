@@ -1,10 +1,11 @@
 @import "components/wrappers/wrappers.styles";
-@import "components/rating/rating.styles";
+@import "components/followers/followers.styles";
 @import "components/navbar/navbar.styles";
 @import "components/forms/forms.styles";
 @import "components/labels/labels.styles";
 @import "components/buttons/buttons.styles";
 @import "components/cards/card.styles";
+@import "components/menu/menu.styles";
 
 .m-auto {
   margin: 0 auto;
@@ -18,6 +19,10 @@
   margin-right: auto;
 }
 
+ml-auto {
+  margin-left: auto;
+}
+
 .p-1 {
   padding: 1%;
 }
@@ -28,6 +33,10 @@
 
 .w-100 {
   width: 100%;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 .d-in-block {

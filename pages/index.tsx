@@ -1,12 +1,10 @@
 import React from 'react';
 import {ContentWrapper} from '../components/wrappers/ContentWrapper';
+import {useRedirect} from '../hooks/useRedirect';
 
 const HomePage = () => {
-  return (
-    <ContentWrapper>
-      <div>1</div>
-    </ContentWrapper>
-  );
+  useRedirect(false);
+  return <ContentWrapper></ContentWrapper>;
 };
 
 export default HomePage;

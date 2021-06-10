@@ -1,30 +1,36 @@
 import React from 'react';
 import {ContentWrapper} from '../../components/wrappers/ContentWrapper';
 import {RepositoryTable} from '../../components/table/RepositoryTable';
-import {CommonModal} from '../../components/modals/CommonModal';
-import {GeneralForm} from '../../components/forms/GeneralForm';
+import {Modal} from '../../components/modals/Modal';
+import {Form} from '../../components/forms/Form';
 import {useFormHandler} from '../../hooks/useFormHandler';
-import {createRepositoryFormData} from '../../utils/repositories/service';
+import {
+  columns,
+  createRepositoryFormData,
+  tableData,
+} from '../../utils/repositories/repositoriesService';
 import {PaddingWrapper} from '../../components/wrappers/PaddingWrapper';
+import {useVisibility} from '../../hooks/useVisibility';
 
 export default function Repositories() {
-  const {object, changeHandler} = useFormHandler({});
+  const {formInput, handleChange} = useFormHandler({});
+  const {visible, onHide, onShow} = useVisibility(false);
 
   return (
     <ContentWrapper>
       <PaddingWrapper>
-        <CommonModal>
-          <GeneralForm
-            hasCheckbox={true}
-            checkboxHandler={() => {}}
+        <Modal visible={visible} onHide={onHide} onShow={onShow}>
+          <Form
+            hasCheckbox
+            handleCheckbox={() => {}}
             checkboxLabel="Visible?"
             buttonText="Create new"
             formData={createRepositoryFormData}
-            inputHandler={changeHandler}
-            submitHandler={() => {}}
+            handleChange={handleChange}
+            handleSubmit={() => {}}
           />
-        </CommonModal>
-        <RepositoryTable />;
+        </Modal>
+        <RepositoryTable columns={columns} dataSource={tableData} />
       </PaddingWrapper>
     </ContentWrapper>
   );

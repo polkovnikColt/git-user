@@ -1,9 +1,10 @@
 import React from 'react';
-import {Avatar, Col, Layout, Menu, Row} from 'antd';
-import {links} from './additional/service';
+import {Col, Layout, Menu, Row} from 'antd';
+import {links} from '../../utils/navbar/navbarService';
 import {MenuItem} from '../menu/MenuItem';
-import {MenuDropdown} from '../menu/MenuDropdown';
-import {DropdownOverlay} from '../menu/DropdownOverlay';
+import {IconButton} from '../buttons/IconButton';
+import {PoweroffOutlined} from '@ant-design/icons/lib';
+import {UserProfile} from '../user/UserProfile';
 
 const {Header} = Layout;
 
@@ -23,10 +24,21 @@ export const Navbar: React.FC = () => {
             ))}
           </Menu>
         </Col>
-        <Col span={6}>
-          <Row>
-            <Avatar src={''} className="avatar" />
-            <DropdownOverlay menu={<MenuDropdown menuItems={[]} />} />
+        <Col span={7}>
+          <Row align="middle" className="h-100">
+            <UserProfile
+              avatar=""
+              tooltipData="User credentials"
+              link=""
+              profileName="User"
+            />
+            <IconButton
+              type="delete"
+              onClick={() => {}}
+              icon={PoweroffOutlined}
+              className="m-auto">
+              Logout
+            </IconButton>
           </Row>
         </Col>
       </Row>

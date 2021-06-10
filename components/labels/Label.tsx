@@ -15,8 +15,13 @@ export const Label: React.FC<LabelProps> = ({
   className,
   text,
   size,
+  ...props
 }) => (
-  <span className={`${size} ${isLink ? 'linked-label' : 'label'} ${className}`}>
+  <div
+    {...props}
+    className={`${size} ${isLink ? 'linked-label' : 'label'} ${
+      className || ''
+    }`}>
     {isLink ? <Link href={href}>{text}</Link> : text}
-  </span>
+  </div>
 );

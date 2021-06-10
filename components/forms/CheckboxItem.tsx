@@ -1,22 +1,19 @@
 import React from 'react';
-import {Checkbox, Space} from "antd";
+import {Checkbox, Space} from 'antd';
 
 type CheckboxProps = {
-    handler: () => void
-    actionName:string
-}
+  handleCheckbox: () => void;
+  actionName: string;
+};
 
-export const CheckboxItem:React.FC<CheckboxProps> = ({
-    handler,
-    actionName
+export const CheckboxItem: React.FC<CheckboxProps> = ({
+  handleCheckbox,
+  actionName,
 }) => {
-    return (
-        <Space>
-           <Checkbox
-               onClick={handler}
-           />
-           {actionName}
-        </Space>
-
-    )
-}
+  return (
+    <Space>
+      <Checkbox onClick={handleCheckbox} />
+      {actionName}
+    </Space>
+  );
+};

@@ -6,7 +6,7 @@ type FollowersProps = {
 };
 
 export const Followers: React.FC<FollowersProps> = ({followersNumber}) => {
-  const [follow, setFollowing] = useState<boolean>(false);
+  const [follow, setFollowing] = useState(false);
 
   const followRepository = () => setFollowing(prev => !prev);
 

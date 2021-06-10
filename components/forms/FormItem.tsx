@@ -7,7 +7,7 @@ type FormItemProps = {
   message?: string;
   required?: boolean;
   InputComponent: typeof Component | ForwardRefExoticComponent<any>;
-  changeHandler: (name: string, value: string) => void;
+  handleChange: (name: string, value: string) => void;
 };
 
 export const FormItem: React.FC<FormItemProps> = ({
@@ -15,11 +15,11 @@ export const FormItem: React.FC<FormItemProps> = ({
   label,
   message,
   InputComponent,
-  changeHandler,
+  handleChange,
   required,
 }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    changeHandler(name, e.target.value);
+  const handleChangeFunc = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    handleChange(name, e.target.value);
   };
 
   return (
@@ -27,7 +27,7 @@ export const FormItem: React.FC<FormItemProps> = ({
       label={label}
       name={name}
       rules={[{required: required, message: message}]}>
-      <InputComponent onChange={handleChange} />
+      <InputComponent onChange={handleChangeFunc} />
     </Form.Item>
   );
 };

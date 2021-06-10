@@ -1,11 +1,11 @@
 import {useState} from 'react';
 
 export const useFormHandler = (initState = {}) => {
-  const [object, setObject] = useState(initState);
+  const [formInput, setFormInput] = useState(initState);
 
-  const changeHandler = (name: string, value: string): void => {
-    setObject({...object, [name]: value});
+  const handleChange = (name: string, value: string): void => {
+    setFormInput({...formInput, [name]: value});
   };
 
-  return {object, changeHandler};
+  return {formInput, handleChange};
 };

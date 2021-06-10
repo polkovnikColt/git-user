@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {ForwardRefExoticComponent} from 'react';
 
 type IconButtonProps = {
-  icon?: any;
+  icon?: ForwardRefExoticComponent<any>;
   type: 'update' | 'add' | 'delete';
-  onClick: any;
+  onClick: () => void;
   className?: string;
 };
 
