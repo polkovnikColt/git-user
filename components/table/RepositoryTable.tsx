@@ -1,14 +1,11 @@
 import React from 'react';
 import {Table} from 'antd';
-import {
-  ColumnsInterface,
-  RepositoryTableInterface,
-} from '../../interfaces/interfaces';
+import {ColumnsI, RepositoryTableI} from '../../interfaces/interfaces';
 import {DescriptionLabel} from '../labels/DescriptionLabel';
 
 type RepositoryTableProps = {
-  columns: ColumnsInterface[];
-  dataSource: RepositoryTableInterface[];
+  columns: ColumnsI[];
+  dataSource: RepositoryTableI[];
 };
 
 export const RepositoryTable: React.FC<RepositoryTableProps> = ({

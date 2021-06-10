@@ -9,10 +9,10 @@ type DescriptionLabelProps = {
 export const DescriptionLabel: React.FC<DescriptionLabelProps> = ({
   text,
   description,
-  className,
+  className = '',
 }) => {
   return (
-    <div className={`${className || ''}`}>
+    <div className={`${className}`}>
       <span className="description">{description}</span>
       <span> : </span>
       <span className="text">{text}</span>

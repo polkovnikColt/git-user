@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
-export const useVisibility = (initState = false) => {
-  const [visible, setVisible] = useState(initState);
+export const useVisibility = (defaultVisibility = false) => {
+  const [visible, setVisible] = useState(defaultVisibility);
 
   const onShow = (): void => {
     setVisible(true);

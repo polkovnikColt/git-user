@@ -12,10 +12,10 @@ export const IconButton: React.FC<IconButtonProps> = ({
   type,
   children,
   onClick,
-  className,
+  className = '',
 }) => {
   return (
-    <button className={`${type} ${className || ''}`} onClick={onClick}>
+    <button className={`${type} ${className}`} onClick={onClick}>
       {icon && <span className="mx-1">{React.createElement(icon)}</span>}
       <span className="mx-1">{children}</span>
     </button>

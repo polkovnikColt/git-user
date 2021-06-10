@@ -6,9 +6,9 @@ type FollowersProps = {
 };
 
 export const Followers: React.FC<FollowersProps> = ({followersNumber}) => {
-  const [follow, setFollowing] = useState(false);
+  const [follow, setFollow] = useState(false);
 
-  const followRepository = () => setFollowing(prev => !prev);
+  const followRepository = () => setFollow(prev => !prev);
 
   return (
     <div className="d-in-block w-100">

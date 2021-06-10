@@ -1,11 +1,11 @@
 import {Component, ForwardRefExoticComponent} from 'react';
 
-export interface LinkInterface {
+export interface LinkI {
   href: string;
   label: string;
 }
 
-export interface FormDataInterface {
+export interface FormDataI {
   label: string;
   name: string;
   inputComponent: typeof Component | ForwardRefExoticComponent<any>;
@@ -13,7 +13,7 @@ export interface FormDataInterface {
   message?: string;
 }
 
-export interface ColumnsInterface {
+export interface ColumnsI {
   title: string;
   dataIndex: string;
   key: string;
@@ -25,7 +25,7 @@ export interface ColumnsInterface {
   };
 }
 
-export interface RepositoryTableInterface {
+export interface RepositoryTableI {
   key: number;
   name: string;
   createdAt: string;

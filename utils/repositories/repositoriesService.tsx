@@ -2,9 +2,9 @@ import React from 'react';
 import {Input} from 'antd';
 import {Label} from '../../components/labels/Label';
 import {Followers} from '../../components/followers/Followers';
-import {ColumnsInterface, FormDataInterface} from '../../interfaces/interfaces';
+import {ColumnsI, FormDataI} from '../../interfaces/interfaces';
 
-export const createRepositoryFormData: FormDataInterface[] = [
+export const createRepositoryFormData: FormDataI[] = [
   {
     name: 'name',
     label: 'Name',
@@ -70,7 +70,7 @@ export const tableData = [
   },
 ];
 
-export const columns: ColumnsInterface[] = [
+export const columns: ColumnsI[] = [
   {
     title: 'Name',
     dataIndex: 'name',

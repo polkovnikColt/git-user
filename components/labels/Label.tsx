@@ -12,16 +12,14 @@ type LabelProps = {
 export const Label: React.FC<LabelProps> = ({
   href,
   isLink,
-  className,
+  className = '',
   text,
   size,
   ...props
 }) => (
   <div
     {...props}
-    className={`${size} ${isLink ? 'linked-label' : 'label'} ${
-      className || ''
-    }`}>
+    className={`${size} ${isLink ? 'linked-label' : 'label'} ${className}`}>
     {isLink ? <Link href={href}>{text}</Link> : text}
   </div>
 );

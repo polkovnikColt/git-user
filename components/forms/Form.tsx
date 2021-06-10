@@ -4,7 +4,7 @@ import {FormItem} from './FormItem';
 import {CheckboxItem} from './CheckboxItem';
 import {IconButton} from '../buttons/IconButton';
 
-type GeneralFormProps = {
+type FormProps = {
   buttonText: string;
   formData: FormDataInterface[];
   handleChange: (name: string, value: string) => void;
@@ -14,7 +14,7 @@ type GeneralFormProps = {
   checkboxLabel?: string;
 };
 
-export const Form: React.FC<GeneralFormProps> = ({
+export const Form: React.FC<FormProps> = ({
   buttonText,
   formData,
   handleChange,

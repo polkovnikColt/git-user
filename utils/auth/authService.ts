@@ -1,7 +1,7 @@
-import {FormDataInterface} from '../../interfaces/interfaces';
 import {Input} from 'antd';
+import {FormDataI} from '../../interfaces/interfaces';
 
-export const authFormData: FormDataInterface[] = [
+export const authFormData: FormDataI[] = [
   {
     name: 'token',
     inputComponent: Input,

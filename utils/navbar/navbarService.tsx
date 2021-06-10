@@ -1,7 +1,7 @@
 import React from 'react';
-import {LinkInterface} from '../../interfaces/interfaces';
+import {LinkI} from '../../interfaces/interfaces';
 
-export const links: LinkInterface[] = [
+export const links: LinkI[] = [
   {
     href: '/auth/sign-in',
     label: 'Login',

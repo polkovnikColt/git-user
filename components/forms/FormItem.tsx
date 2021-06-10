@@ -18,7 +18,7 @@ export const FormItem: React.FC<FormItemProps> = ({
   handleChange,
   required,
 }) => {
-  const handleChangeFunc = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     handleChange(name, e.target.value);
   };
 
@@ -26,8 +26,8 @@ export const FormItem: React.FC<FormItemProps> = ({
     <Form.Item
       label={label}
       name={name}
-      rules={[{required: required, message: message}]}>
-      <InputComponent onChange={handleChangeFunc} />
+      rules={[{required: required, message: message || ''}]}>
+      <InputComponent onChange={onChange} />
     </Form.Item>
   );
 };
